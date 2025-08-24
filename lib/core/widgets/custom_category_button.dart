@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quran_app/core/utils/app_colors.dart';
-import 'package:quran_app/features/home/data/cubit/home_cubit.dart';
-import 'package:quran_app/features/home/data/cubit/home_state.dart';
+import 'package:quran_app/features/home/data/cubit/home_cubit/home_cubit.dart';
+import 'package:quran_app/features/home/data/cubit/home_cubit/home_state.dart';
 
 class CustomCategoryButton extends StatelessWidget {
   const CustomCategoryButton({super.key, required this.buttonName, this.onTap});

@@ -30,9 +30,11 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.9.0
+  # extended_svg_picture: ^1.0.0
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.1
+  flutter_svg: ^2.2.0
 
 dev_dependencies:
   flutter_lints: ^5.0.0

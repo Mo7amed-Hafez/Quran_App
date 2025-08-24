@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:quran_app/core/utils/app_colors.dart';
 
 class CustomSuwar extends StatelessWidget {
-  const CustomSuwar({super.key, required this.title, required this.subtitle});
+  const CustomSuwar({super.key, required this.title, required this.subtitle, required Null Function() onTap});
 
   final String title;
   final String? subtitle;

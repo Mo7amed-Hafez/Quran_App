@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran_app/features/home/data/cubit/home_state.dart';
+import 'package:quran_app/features/home/data/cubit/home_cubit/home_state.dart';
 import 'package:quran_app/features/home/data/models/radio_model.dart';
 import 'package:quran_app/features/home/data/models/surah_model.dart';
 
@@ -14,7 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       emit(HomeLoadingState());
       var response = await dio.get(
-        "https://mp3quran.net/api/v3/?language=ar",
+        "https://mp3quran.net/api/v3/$buttonName?language=ar",
       );
       if (buttonName == "Suwar") {
         List<SurahModel> suwar = [];

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quran_app/features/home/data/cubit/home_cubit.dart';
+import 'package:quran_app/features/home/data/cubit/home_cubit/home_cubit.dart';
 import 'package:quran_app/features/home/presentation/views/home_view.dart';
+import 'package:quran_app/features/home/presentation/views/suwar_view.dart';
 import 'package:quran_app/features/splash/splash_view.dart';
 
 void main() {
@@ -22,6 +23,7 @@ class QuranApp extends StatelessWidget {
         routes: {
           '/SplashView': (context) => SplashView(),
           '/HomeView': (context) => HomeView(),
+          '/SuwarView': (context) => SuwarView(),
         },
         
       ),
