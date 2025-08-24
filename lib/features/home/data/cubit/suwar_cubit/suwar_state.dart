@@ -10,5 +10,5 @@ final List <SuwarPageModel> suwars;
 }
 class FailureSuwarState extends SuwarState {
   final String message;
-  FailureSuwarState(this.message);
+  FailureSuwarState(this.message,);
 }

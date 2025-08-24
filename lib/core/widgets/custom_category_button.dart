@@ -13,11 +13,10 @@ class CustomCategoryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
-        var cubit = BlocProvider.of<HomeCubit>(context);  // get cubit
-        bool isActive = buttonName == cubit.selectedButtonName; // chech on selected button of category
+        var cubit = BlocProvider.of<HomeCubit>(context);
+        bool isActive = buttonName == cubit.selectedButtonName;
         return InkWell(
           onTap: onTap,
-
           child: Container(
             alignment: Alignment.center,
             width: 80,
@@ -25,7 +24,7 @@ class CustomCategoryButton extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: AppColors.secondaryColor.withOpacity(.5),
+                  color: AppColors.secondaryColor.withValues(alpha: 0.5),
                   spreadRadius: 2,
                   blurRadius: 7,
                   offset: const Offset(-2, 3),
@@ -33,17 +32,13 @@ class CustomCategoryButton extends StatelessWidget {
                 ),
               ],
               borderRadius: BorderRadius.circular(25),
-              color: isActive
-                  ? AppColors.primaryColor
-                  : Colors.white,
+              color: isActive ? AppColors.primaryColor : Colors.white,
               border: Border.all(color: AppColors.secondaryColor, width: 1),
             ),
             child: Text(
               buttonName,
               style: TextStyle(
-                color: isActive
-                    ? Colors.white
-                    : Colors.black,
+                color: isActive ? Colors.white : Colors.black,
                 fontSize: 16,
               ),
             ),

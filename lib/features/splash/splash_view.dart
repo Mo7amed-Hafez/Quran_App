@@ -11,11 +11,10 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-
-@override
+  @override
   void initState() {
     super.initState();
-    Future.delayed( Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.pushReplacementNamed(context, '/HomeView');
     });
   }
@@ -28,10 +27,10 @@ class _SplashViewState extends State<SplashView> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(AppAssets.logo),
-            LogoName(),
-            SizedBox(height: 10),
+            const LogoName(),
+            const SizedBox(height: 10),
             Text(
-            " إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ",
+              " إِنَّا نَحْنُ نَزَّلْنَا ٱلذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
